@@ -1,0 +1,17 @@
+create promise based get requests to gather all podcast data
+
+map data 
+	remove garbage
+	add ratings object
+		{avgScore: avgScore,
+		totalScore: totalScore.
+		numRatings: numRatings
+		}
+
+set up search for podcasts
+	angular filter search
+
+	upon selection show thumbnail, description, rating etc
+	when rated update podcast object with new score
+
+homepage should show top rated podcasts and thumbnails

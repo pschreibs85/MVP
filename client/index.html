@@ -56,20 +56,7 @@
                     <li>
                         <a href="/contact">Contact</a>
                     </li>
-                    <li>
-                        <div id='container' ng-controller="SearchController as Search">
-                            <!-- <input type="text" placeholder="Podcast Name" ng-model="searching"></input> -->
-                            <md-autocomplete md-selected-item="selectedItem" md-search-text="searchText" 
-                                md-items="item in Search.titlesArray" md-item-text="item.title">
-                              <md-item-template>
-                                <span md-highlight-text="searchText">{{item.title}}</span>
-                              </md-item-template>
-                              <md-not-found>
-                                No matches found.
-                              </md-not-found>
-                            </md-autocomplete>
-                        </div>
-                    </li>
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -180,7 +167,7 @@
     <script src="app.js"></script>
     <script src="src/main.js"></script>
     <script src="src/about.js"></script>
-    <script src="app/views/search/search.js"></script>
+    <script src="app/views/search.js"></script>
     <link rel="stylesheet" type="text/css" href="index.css">
   </footer>
 

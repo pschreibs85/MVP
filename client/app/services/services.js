@@ -1,13 +1,31 @@
 
 angular.module('ppdb.services', [])
 
-.factory('Generate', function ($http) {
+.factory('Generate', function () {
+
+  var populateFeaturedPodcast = function (data) {
+  	  	console.log("step 2");
+  	var promise = new Promise(function (resolve, reject) {
+  		  	console.log("step 3");
+  		var len = data.length;
+  		var index1 = Math.floor(Math.random()*len);
+  		var featured = data[index1];
+  		resolve(featured)
+  	})
+
+    return promise.then(function (featured) {
+    	console.log("step 4")
+      return featured;
+    });
+  }
+
 
   var populateTrendingPodcasts = function (data) {
   	  	console.log("step 2");
   	var promise = new Promise(function (resolve, reject) {
   		  	console.log("step 3");
   		var len = data.length;
+  		console.log(len)
   		var index1 = Math.floor(Math.random()*len);
   		var index2 = Math.floor(Math.random()*len);
   		var index3 = Math.floor(Math.random()*len);
@@ -17,11 +35,13 @@ angular.module('ppdb.services', [])
 				second: data[index2],
 				third: data[index3],
 				forth: data[index4]
-  		}
-  		return trends
+  		};
+  		console.log(trends)
+  		resolve(trends)
   	})
 
     return promise.then(function (trending) {
+    	console.log("step 4")
       return trending;
     });
   }
@@ -41,6 +61,7 @@ angular.module('ppdb.services', [])
 
   return {
     populateTrendingPodcasts: populateTrendingPodcasts,
+    populateFeaturedPodcast: populateFeaturedPodcast
   }
 
 })

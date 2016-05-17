@@ -20,28 +20,22 @@ angular.module('ppdb.generate', [])
 
 
   $scope.populateFeaturedPodcast = function () {
-  		  	console.log("step 1");
+
     Generate.populateFeaturedPodcast($scope.data.mapped)
 	    .then(function (featured) {
-	    	  	console.log("step 5", featured);
 	    	$scope.data.featured = featured;
-	    	console.log($scope.data.featured)
 	    })
 	    .catch(function (error) {
-	    	  	console.log("step 5 error");
 	      console.error(error)
 	    })
   }
 
   $scope.populateTrendingPodcasts = function () {
-  	console.log("step 1");
     Generate.populateTrendingPodcasts($scope.data.mapped)
 	    .then(function (trending) {
-	    	  	console.log("step 5");
 	    	$scope.data.trending = trending
 	    })
 	    .catch(function (error) {
-	    	 	console.log("step 5 error");
 	      console.error(error)
 	    })
   }

@@ -3,7 +3,7 @@ angular.module('ppdb.autoComplete', [])
     // console.log("calling autoCompleteController")
 
   function autoCompleteController ($timeout, $q, $log) {
-      console.log("calling autoCompleteController")
+      // console.log("calling autoCompleteController") -- gets called twice
       var self = this;
       self.isDisabled    = false;
       self.titles        = loadTitles();

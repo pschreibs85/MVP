@@ -17,6 +17,8 @@
     <!-- Custom CSS -->
     <link href="bootstrap/css/portfolio-item.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -48,7 +50,7 @@
                         <a href="/topRated">Top Rated</a>
                     </li>
                     <li>
-                        <a href="/search">Search</a>
+                        <a ui-sref="search">Search</a>
                     </li>
                     <li>
                         <a href="/about">About</a>
@@ -71,7 +73,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">Featured Podcast
-                    <small>insert name of featured podcast here</small>
+                    <small>{{Data.mappedData[2363].title}}</small>
                 </h1>
             </div>
         </div>
@@ -147,31 +149,40 @@
             <!-- /.row -->
         </footer>
 
-    </div>
-    <!-- /.container -->
-
-    <!-- jQuery -->
+ <!-- jQuery -->
     <script src="bootstrap/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
 
+<!--     <script src="/js/app-bundle.js"></script> -->
+    </div>
+    <!-- /.container -->
+
+   
+
   <footer>
+ 
     <script src="./lib/angular/angular.js"></script>
+    <script src="https://cdn.jsdelivr.net/angular.ui-router/1.0.0-alpha0/angular-ui-router.min.js"></script>
     <script src="./lib/angular-animate/angular-animate.js"></script>
-    <script src="./lib/angular-cookies/angular-cookies.js"></script>
+<!--     <script src="./lib/angular-cookies/angular-cookies.js"></script>
     <script src="./lib/angular-resource/angular-resource.js"></script>
+    <script src="./lib/angular-sanitize/angular-sanitize.js"></script> -->
     <script src="./lib/angular-touch/angular-touch.js"></script>
-    <script src="./lib/angular-sanitize/angular-sanitize.js"></script>
-    <script src="./lib/angular-ui-router/release/angular-ui-router.js"></script>
 
-    <script src="./app/src/generate.js"></script>
-    <script src="./app/src/mapped.js"></script>
-    <script src="./app/src/titles.js"></script>    
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+
     <script src="./app/app.js"></script>
+    <script src="./app/src/generate.js"></script>
+    <script src="./app/src/search.js"></script>
+    <script src="./app/src/mapped.js"></script>
+    <script src="./app/src/titles.js"></script>
+    <script src="./app/src/autoComplete.js"></script> 
+    <script src="./app/services/services.js"></script>    
 
-    <script src="/app-bundle.js"></script>
-    <link rel="stylesheet" type="text/css" href="index.css">
   </footer>
 
 </body>

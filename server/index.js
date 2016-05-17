@@ -1,13 +1,18 @@
 var express = require('express');
 var Path = require('path');
 var routes = express.Router();
-
+// var browserify = require('browserify');
 //
 //route to your index.html
 //
 var assetFolder = Path.resolve(__dirname, '../client/');
 routes.use(express.static(assetFolder));
 
+
+// routes.get('/app-bundle.js', function (req, res) {
+//   browserify(assetFolder + 'app/app.js')
+// }
+  
 //
 // Example endpoint (also tested in test/server/index_test.js)
 //
